@@ -568,6 +568,7 @@ function show_list_messageAndButtons(response, player_info, craftsman_info) {
 
     response.toEdit.new_text = message_text;
     response.toEdit.options.reply_markup.inline_keyboard = view_keyboard;
+    //response.toEdit.options.reply_markup.force_reply= true;
 }
 
 // vista list_view, ma per query
@@ -584,6 +585,7 @@ function list_view(response, craftsman_info, player_info, query_data) {
         }
         response.toEdit.new_text = list_view_message_text(craftables_array, craftsman_info, query_data);
         response.toEdit.options.reply_markup.inline_keyboard = list_view_buttons(craftables_array, craftsman_info, player_info, query_data);
+        //response.toEdit.options.reply_markup.force_reply= true;
     }
 
 }
@@ -927,6 +929,7 @@ function list_view_custom_input(response, player_info, craftsman_info, query_dat
 
     response.toEdit.new_text = list_view_message_text(craftables_array, craftsman_info, [], query_data[0], search_results);
     response.toEdit.options.reply_markup.inline_keyboard = keyboard_buttons;
+    //response.toEdit.options.reply_markup.force_reply= true;
 
 }
 
